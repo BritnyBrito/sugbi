@@ -1,1 +1,1 @@
-
+drop table catalog.prestamo;

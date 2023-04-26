@@ -1,0 +1,120 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Aborting jack-in. No project type selected.
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Using host:port localhost:7002 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉>  (user/start); Use `alt+enter` to evaluate
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
+; FATAL: role "sugbi" does not exist
+clj꞉shadow.user꞉>(user/start)
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
+; FATAL: role "sugbi" does not exist
+clj꞉shadow.user꞉> 
+#function[user/start]
+clj꞉shadow.user꞉> (user/create-migration "prestamos")
+nil
+clj꞉shadow.user꞉> (user/migrate)
+; Execution error (NullPointerException) at migratus.database/connect* (database.clj:161).
+; Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "conn" is null
+clj꞉shadow.user꞉> user/start
+#function[user/start]
+clj꞉shadow.user꞉> 
+clj꞉shadow.user꞉> (user/migrate)
+; Execution error (NullPointerException) at migratus.database/connect* (database.clj:161).
+; Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "conn" is null
+clj꞉shadow.user꞉> user/start
+#function[user/start]
+clj꞉shadow.user꞉> (user/migrate)
+; Execution error (NullPointerException) at migratus.database/connect* (database.clj:161).
+; Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "conn" is null
+clj꞉shadow.user꞉> (user/migrate)
+; Execution error (NullPointerException) at migratus.database/connect* (database.clj:161).
+; Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "conn" is null
+clj꞉shadow.user꞉> (user/start)
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
+; FATAL: role "sugbi" does not exist
+clj꞉shadow.user꞉> 
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+; Jack-in done.
+cljs꞉cljs.user꞉> (user/start) ; Use `alt+enter` to evaluate
+nil
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
+cljs꞉cljs.user꞉> 
+nil
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
+cljs꞉cljs.user꞉> (user/migrate)
+nil
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
+cljs꞉cljs.user꞉> :quit
+nil
+; No available JS runtime.
+; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
+cljs꞉cljs.user꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Using host:port localhost:7002 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉> (user/start)
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
+; FATAL: role "sugbi" does not exist
+clj꞉shadow.user꞉> user/start
+#function[user/start]
+clj꞉shadow.user꞉> user/migrate
+#function[user/migrate]
+clj꞉shadow.user꞉> user/reset-db
+#function[user/reset-db]
+clj꞉shadow.user꞉> (user/migrate)
+; Execution error (NullPointerException) at migratus.database/connect* (database.clj:161).
+; Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "conn" is null
+clj꞉shadow.user꞉> (user/reset-db)
+; Execution error (NullPointerException) at migratus.database/connect* (database.clj:161).
+; Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "conn" is null
+clj꞉shadow.user꞉> 

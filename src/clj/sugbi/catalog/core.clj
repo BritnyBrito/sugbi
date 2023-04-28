@@ -42,4 +42,59 @@
     (merge-on-key
      :isbn
      db-book-infos
+     open-library-book-infos)))    
+(defn checkout-book
+  [user-id book_id]
+  (let [num_ejemplares (- ((db/total_ejemplares {:book_id book_id})  :num_ejemplares) 1) 
+        inicio_prestamo ((db/fecha {}) :current_date)]
+  (if (< num_ejemplares 0)
+    "no hay ejemplares disponibles del título dado"
+    (do
+      (db/modifica-libro-ejemplares! {:num_ejemplares num_ejemplares
+                                      :book_id book_id})
+      (db/checkout-book!{:inicio_prestamo inicio_prestamo
+                          :user_id user-id
+                          :book_id book_id})))))
+(defn return-book
+  [user-id book-item-id]
+  (let [num_ejemplares (+ 1 ((db/total_ejemplares {:book_id book-item-id}) :num_ejemplares))
+        fecha ((db/fecha {}) :current_date)]
+    (if ((db/is-late {:book-id book-item-id
+                    :user_id user-id
+                    :fecha fecha}) 0) 
+      "entregado tarde"
+      (do
+        (db/modifica-libro-ejemplares! {:num_ejemplares num_ejemplares
+                                        :book_id book-item-id})
+        (db/return-book! {:inicio_prestamo fecha
+                            :user_id user-id
+                            :book_id book-item-id})))))
+
+
+(defn get-book-lendings
+  [user-id]
+  (db/get-book-lendings {:user_id user-id}))
+
+(defn insert-book
+  [title isdn]
+  (db/insert-book! {:title title, :isbn isdn}))
+(defn insert-ejem
+  [book-id num]
+  (db/insert-insert-ejem! {:num_ejemplares num
+                    :book_id book-id}))
+(defn get-id
+  [title]
+  (db/get-id {:title title}))
+
+
+
+
+(defn enriched-search-books-by-title
+  [title fields]
+  (let [db-book-infos           (db/matching-books title)
+        isbns                   (map :isbn db-book-infos)
+        open-library-book-infos (olb/multiple-book-info isbns fields)]
+    (merge-on-key
+     :isbn
+     db-book-infos
      open-library-book-infos)))

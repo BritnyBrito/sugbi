@@ -1,0 +1,1364 @@
+2023-04-27 00:08:43,645 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 00:08:44,439 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 00:09:49,123 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 00:09:50,485 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 00:09:50,492 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 00:09:50,714 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 00:09:50,764 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 00:10:17,641 [nREPL-session-a0040f18-c2ff-4554-94a1-3c6cb5b285d5] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "sugbi_dev" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:173)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval58222.invokeStatic(form-init8274585376961647557.clj:218)
+	at shadow.user$eval58222.invoke(form-init8274585376961647557.clj:218)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 00:12:19,210 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 00:13:20,697 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 00:13:22,078 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 00:13:22,085 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 00:13:22,302 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 00:13:22,321 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 00:13:43,711 [nREPL-session-ba406fce-ac04-4c06-b9ca-0c443f319133] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "sugbi_dev" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:173)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval56229.invokeStatic(form-init9100417567368610852.clj:248)
+	at shadow.user$eval56229.invoke(form-init9100417567368610852.clj:248)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 00:13:51,985 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 00:56:04,804 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 00:56:07,823 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 00:56:07,855 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 00:56:08,450 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 00:56:08,481 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 00:56:58,370 [nREPL-session-b2fc2777-9941-4fa9-a575-576b7ca5fd60] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval58222.invokeStatic(form-init15048347665345867428.clj:23)
+	at shadow.user$eval58222.invoke(form-init15048347665345867428.clj:23)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 00:58:09,873 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 00:58:59,271 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 00:59:00,936 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 00:59:00,953 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 00:59:01,180 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 00:59:01,193 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 00:59:27,867 [nREPL-session-34c0805d-36c8-4000-9301-d6390004f6df] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval56229.invokeStatic(form-init1725431100541474763.clj:53)
+	at shadow.user$eval56229.invoke(form-init1725431100541474763.clj:53)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 01:00:22,851 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 01:01:25,754 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 01:01:28,361 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 01:01:28,369 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 01:01:28,702 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 01:01:28,723 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 01:01:55,526 [nREPL-session-87b7ad1a-18c0-4528-805a-236ed23f7cda] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval56474.invokeStatic(form-init16205000021554737680.clj:83)
+	at shadow.user$eval56474.invoke(form-init16205000021554737680.clj:83)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 01:02:14,925 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 01:03:18,568 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 01:03:19,610 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 01:03:19,618 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 01:03:19,812 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 01:03:19,826 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 01:03:43,281 [nREPL-session-fc65d0fa-4e60-4ba5-a634-7e936bc9eecc] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval56474.invokeStatic(form-init10594252089941932234.clj:113)
+	at shadow.user$eval56474.invoke(form-init10594252089941932234.clj:113)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 01:04:18,956 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 01:05:18,093 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 01:05:19,509 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 01:05:19,516 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 01:05:19,726 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 01:05:19,743 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 01:05:34,799 [nREPL-session-7a2540c1-aa6b-4ad1-9ee1-281cca939cd6] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval54427.invokeStatic(form-init6742735141117138484.clj:143)
+	at shadow.user$eval54427.invoke(form-init6742735141117138484.clj:143)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 01:06:05,849 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 01:06:59,146 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 01:07:00,473 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 01:07:00,480 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 01:07:00,784 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 01:07:00,815 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 01:07:16,482 [nREPL-session-117d2dab-f8a9-4f0f-83b7-c7f975d5e93c] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval54184.invokeStatic(form-init16551903298269365085.clj:173)
+	at shadow.user$eval54184.invoke(form-init16551903298269365085.clj:173)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 01:07:29,600 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 01:07:29,829 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:47:11,253 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 08:47:12,700 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 08:47:12,713 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 08:47:13,141 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 08:47:13,188 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 08:47:50,930 [nREPL-session-43941941-57ac-4807-9903-3abdc52ba66e] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "britnybrito"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval58222.invokeStatic(form-init914537079157188229.clj:23)
+	at shadow.user$eval58222.invoke(form-init914537079157188229.clj:23)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 08:48:41,283 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:49:58,557 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 08:50:00,012 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 08:50:00,027 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 08:50:00,275 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 08:50:00,294 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 08:50:39,378 [nREPL-session-33856e70-6e56-4da6-889c-49e2337d3155] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "sugbi_devo" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:173)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval56474.invokeStatic(form-init8799966793411637568.clj:53)
+	at shadow.user$eval56474.invoke(form-init8799966793411637568.clj:53)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 08:51:03,280 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:51:03,510 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:52:01,990 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 08:52:03,344 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 08:52:03,351 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 08:52:03,576 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 08:52:03,600 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 08:52:44,301 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:53:29,523 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 08:53:30,831 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 08:53:30,837 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 08:53:31,058 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 08:53:31,093 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 08:53:59,153 [nREPL-session-ea52ffa4-4003-4c50-9def-bc45ee3b7e0b] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization. 
+org.postgresql.util.PSQLException: FATAL: database "sugbi_devo" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:173)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:290)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:468)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:81)
+	at hikari_cp.core$make_datasource.invokeStatic(core.clj:268)
+	at hikari_cp.core$make_datasource.invoke(core.clj:265)
+	at conman.core$connect_BANG_.invokeStatic(core.clj:159)
+	at conman.core$connect_BANG_.invoke(core.clj:155)
+	at sugbi.db.core$eval13577$fn__13578.invoke(core.clj:15)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:74)
+	at mount.core$record_BANG_.invoke(core.cljc:73)
+	at mount.core$up$fn__457.invoke(core.cljc:81)
+	at mount.core$up.invokeStatic(core.cljc:80)
+	at mount.core$up.invoke(core.cljc:78)
+	at mount.core$bring.invokeStatic(core.cljc:247)
+	at mount.core$bring.invoke(core.cljc:239)
+	at mount.core$start.invokeStatic(core.cljc:289)
+	at mount.core$start.doInvoke(core.cljc:281)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$apply.invoke(core.clj:662)
+	at mount.core$start_without.invokeStatic(core.cljc:409)
+	at mount.core$start_without.doInvoke(core.cljc:403)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at user$start.invokeStatic(user.clj:22)
+	at user$start.invoke(user.clj:18)
+	at shadow.user$eval56474.invokeStatic(form-init16821129447014331549.clj:108)
+	at shadow.user$eval56474.invoke(form-init16821129447014331549.clj:108)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-27 08:54:11,372 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:54:11,540 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 08:55:28,394 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 08:55:29,700 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 08:55:29,707 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 08:55:29,915 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 08:55:29,930 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 08:55:49,947 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-04-27 08:55:51,205 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  luminus.http-server - server started on port 3000 
+2023-04-27 09:03:03,452 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m43s348ms). 
+2023-04-27 09:05:33,264 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Starting migrations 
+2023-04-27 09:05:33,509 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.database - creating migration table 'schema_migrations' 
+2023-04-27 09:05:33,755 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x360bfa9b /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 09:05:33,789 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230417032642 20230425233151] 
+2023-04-27 09:05:33,790 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-27 09:05:33,800 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6b499bc2 org.postgresql.jdbc.PgConnection@6b499bc2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:05:33,983 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-27 09:05:34,115 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-27 09:05:34,152 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-27 09:05:34,153 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6b499bc2 org.postgresql.jdbc.PgConnection@6b499bc2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:05:34,187 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-27 09:05:34,237 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-27 09:05:34,264 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Up 20230417032642-adds-librarians 
+2023-04-27 09:05:34,264 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6b499bc2 org.postgresql.jdbc.PgConnection@6b499bc2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:05:34,303 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 2 up migrations 
+2023-04-27 09:05:34,388 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.database - marking 20230417032642 complete 
+2023-04-27 09:05:34,478 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Up 20230425233151-prestamos 
+2023-04-27 09:05:34,479 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6b499bc2 org.postgresql.jdbc.PgConnection@6b499bc2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:05:34,511 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 09:05:34,551 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - failed to execute command:
+ create table catalog.prestamo (
+prestamo_id bigint generated always as identity primary key,
+inicio_prestamo date default current_day,
+user_id bigint not null,
+book_id bigint not null references catalog.book
+); 
+2023-04-27 09:05:34,551 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - ERROR: cannot use column reference in DEFAULT expression
+  Position: 123 
+2023-04-27 09:05:34,567 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.database - Migration prestamos failed because Batch entry 0 create table catalog.prestamo (
+prestamo_id bigint generated always as identity primary key,
+inicio_prestamo date default current_day,
+user_id bigint not null,
+book_id bigint not null references catalog.book
+) was aborted: ERROR: cannot use column reference in DEFAULT expression
+  Position: 123  Call getNextException to see other errors in the batch. backing out 
+2023-04-27 09:05:34,571 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 09:05:34,576 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - failed to execute command:
+ drop table catalog.prestamo; 
+2023-04-27 09:05:34,577 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - ERROR: table "prestamo" does not exist 
+2023-04-27 09:05:34,581 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.database - As expected, one of the statements failed in prestamos while backing out the migration 
+java.sql.BatchUpdateException: Batch entry 0 drop table catalog.prestamo was aborted: ERROR: table "prestamo" does not exist  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.ResultHandlerDelegate.handleError(ResultHandlerDelegate.java:52)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:559)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:887)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:910)
+	at migratus.migration.sql$do_commands.invokeStatic(sql.clj:71)
+	at migratus.migration.sql$do_commands.invoke(sql.clj:60)
+	at migratus.migration.sql$execute_command$fn__27811.invoke(sql.clj:79)
+	at migratus.migration.sql$execute_command.invokeStatic(sql.clj:78)
+	at migratus.migration.sql$execute_command.invoke(sql.clj:75)
+	at migratus.migration.sql$run_sql_STAR_.invokeStatic(sql.clj:96)
+	at migratus.migration.sql$run_sql_STAR_.invoke(sql.clj:92)
+	at migratus.migration.sql$run_sql$fn__27829.invoke(sql.clj:103)
+	at next.jdbc.transaction$transact_STAR_.invokeStatic(transaction.clj:72)
+	at next.jdbc.transaction$transact_STAR_.invoke(transaction.clj:51)
+	at next.jdbc.transaction$eval13275$fn__13276.invoke(transaction.clj:121)
+	at next.jdbc.protocols$eval12267$fn__12268$G__12258__12277.invoke(protocols.clj:57)
+	at next.jdbc$transact.invokeStatic(jdbc.clj:381)
+	at next.jdbc$transact.invoke(jdbc.clj:373)
+	at migratus.migration.sql$run_sql.invokeStatic(sql.clj:102)
+	at migratus.migration.sql$run_sql.invoke(sql.clj:98)
+	at migratus.migration.sql.SqlMigration.down(sql.clj:122)
+	at migratus.database$migrate_up_STAR_$fn__28197.invoke(database.clj:89)
+	at migratus.database$migrate_up_STAR_.invokeStatic(database.clj:88)
+	at migratus.database$migrate_up_STAR_.invoke(database.clj:74)
+	at migratus.database.Database$fn__28263.invoke(database.clj:301)
+	at next.jdbc.transaction$transact_STAR_.invokeStatic(transaction.clj:72)
+	at next.jdbc.transaction$transact_STAR_.invoke(transaction.clj:51)
+	at next.jdbc.transaction$eval13275$fn__13276.invoke(transaction.clj:121)
+	at next.jdbc.protocols$eval12267$fn__12268$G__12258__12277.invoke(protocols.clj:57)
+	at next.jdbc$transact.invokeStatic(jdbc.clj:381)
+	at next.jdbc$transact.invoke(jdbc.clj:373)
+	at migratus.database.Database.migrate_up(database.clj:300)
+	at migratus.core$up_STAR_.invokeStatic(core.clj:83)
+	at migratus.core$up_STAR_.invoke(core.clj:81)
+	at migratus.core$migrate_up_STAR_.invokeStatic(core.clj:94)
+	at migratus.core$migrate_up_STAR_.invoke(core.clj:85)
+	at migratus.core$migrate_STAR_.invokeStatic(core.clj:107)
+	at migratus.core$migrate_STAR_.invoke(core.clj:103)
+	at clojure.core$partial$fn__5908.invoke(core.clj:2642)
+	at migratus.core$run.invokeStatic(core.clj:54)
+	at migratus.core$run.invoke(core.clj:50)
+	at migratus.core$migrate.invokeStatic(core.clj:114)
+	at migratus.core$migrate.invoke(core.clj:109)
+	at luminus_migrations.core$fn__28420.invokeStatic(core.clj:44)
+	at luminus_migrations.core$fn__28420.invoke(core.clj:41)
+	at luminus_migrations.core$migrate.invokeStatic(core.clj:98)
+	at luminus_migrations.core$migrate.invoke(core.clj:84)
+	at user$migrate.invokeStatic(user.clj:49)
+	at user$migrate.invoke(user.clj:46)
+	at shadow.user$eval56489.invokeStatic(form-init1151007707792084299.clj:146)
+	at shadow.user$eval56489.invoke(form-init1151007707792084299.clj:146)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.postgresql.util.PSQLException: ERROR: table "prestamo" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	... 76 common frames omitted
+2023-04-27 09:05:34,622 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Ending migrations 
+2023-04-27 09:08:42,555 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Starting migrations 
+2023-04-27 09:08:42,713 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x56641101 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 09:08:42,731 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Running up for [20230425233151] 
+2023-04-27 09:08:42,732 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Up 20230425233151-prestamos 
+2023-04-27 09:08:42,734 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0xc5e5bbd org.postgresql.jdbc.PgConnection@c5e5bbd]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:08:42,871 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 09:08:42,883 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - failed to execute command:
+ create table catalog.prestamo (
+prestamo_id bigint generated always as identity primary key,
+inicio_prestamo date default current_day,
+user_id bigint not null,
+book_id bigint not null references catalog.book
+); 
+2023-04-27 09:08:42,884 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - ERROR: cannot use column reference in DEFAULT expression
+  Position: 123 
+2023-04-27 09:08:42,892 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.database - Migration prestamos failed because Batch entry 0 create table catalog.prestamo (
+prestamo_id bigint generated always as identity primary key,
+inicio_prestamo date default current_day,
+user_id bigint not null,
+book_id bigint not null references catalog.book
+) was aborted: ERROR: cannot use column reference in DEFAULT expression
+  Position: 123  Call getNextException to see other errors in the batch. backing out 
+2023-04-27 09:08:42,910 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 09:08:42,920 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - failed to execute command:
+ drop table catalog.prestamo; 
+2023-04-27 09:08:42,921 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] ERROR migratus.migration.sql - ERROR: table "prestamo" does not exist 
+2023-04-27 09:08:42,928 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] DEBUG migratus.database - As expected, one of the statements failed in prestamos while backing out the migration 
+java.sql.BatchUpdateException: Batch entry 0 drop table catalog.prestamo was aborted: ERROR: table "prestamo" does not exist  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.ResultHandlerDelegate.handleError(ResultHandlerDelegate.java:52)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:559)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:887)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:910)
+	at migratus.migration.sql$do_commands.invokeStatic(sql.clj:71)
+	at migratus.migration.sql$do_commands.invoke(sql.clj:60)
+	at migratus.migration.sql$execute_command$fn__27811.invoke(sql.clj:79)
+	at migratus.migration.sql$execute_command.invokeStatic(sql.clj:78)
+	at migratus.migration.sql$execute_command.invoke(sql.clj:75)
+	at migratus.migration.sql$run_sql_STAR_.invokeStatic(sql.clj:96)
+	at migratus.migration.sql$run_sql_STAR_.invoke(sql.clj:92)
+	at migratus.migration.sql$run_sql$fn__27829.invoke(sql.clj:103)
+	at next.jdbc.transaction$transact_STAR_.invokeStatic(transaction.clj:72)
+	at next.jdbc.transaction$transact_STAR_.invoke(transaction.clj:51)
+	at next.jdbc.transaction$eval13275$fn__13276.invoke(transaction.clj:121)
+	at next.jdbc.protocols$eval12267$fn__12268$G__12258__12277.invoke(protocols.clj:57)
+	at next.jdbc$transact.invokeStatic(jdbc.clj:381)
+	at next.jdbc$transact.invoke(jdbc.clj:373)
+	at migratus.migration.sql$run_sql.invokeStatic(sql.clj:102)
+	at migratus.migration.sql$run_sql.invoke(sql.clj:98)
+	at migratus.migration.sql.SqlMigration.down(sql.clj:122)
+	at migratus.database$migrate_up_STAR_$fn__28197.invoke(database.clj:89)
+	at migratus.database$migrate_up_STAR_.invokeStatic(database.clj:88)
+	at migratus.database$migrate_up_STAR_.invoke(database.clj:74)
+	at migratus.database.Database$fn__28263.invoke(database.clj:301)
+	at next.jdbc.transaction$transact_STAR_.invokeStatic(transaction.clj:72)
+	at next.jdbc.transaction$transact_STAR_.invoke(transaction.clj:51)
+	at next.jdbc.transaction$eval13275$fn__13276.invoke(transaction.clj:121)
+	at next.jdbc.protocols$eval12267$fn__12268$G__12258__12277.invoke(protocols.clj:57)
+	at next.jdbc$transact.invokeStatic(jdbc.clj:381)
+	at next.jdbc$transact.invoke(jdbc.clj:373)
+	at migratus.database.Database.migrate_up(database.clj:300)
+	at migratus.core$up_STAR_.invokeStatic(core.clj:83)
+	at migratus.core$up_STAR_.invoke(core.clj:81)
+	at migratus.core$migrate_up_STAR_.invokeStatic(core.clj:94)
+	at migratus.core$migrate_up_STAR_.invoke(core.clj:85)
+	at migratus.core$migrate_STAR_.invokeStatic(core.clj:107)
+	at migratus.core$migrate_STAR_.invoke(core.clj:103)
+	at clojure.core$partial$fn__5908.invoke(core.clj:2642)
+	at migratus.core$run.invokeStatic(core.clj:54)
+	at migratus.core$run.invoke(core.clj:50)
+	at migratus.core$migrate.invokeStatic(core.clj:114)
+	at migratus.core$migrate.invoke(core.clj:109)
+	at luminus_migrations.core$fn__28420.invokeStatic(core.clj:44)
+	at luminus_migrations.core$fn__28420.invoke(core.clj:41)
+	at luminus_migrations.core$migrate.invokeStatic(core.clj:98)
+	at luminus_migrations.core$migrate.invoke(core.clj:84)
+	at user$migrate.invokeStatic(user.clj:49)
+	at user$migrate.invoke(user.clj:46)
+	at shadow.user$eval56516.invokeStatic(form-init1151007707792084299.clj:153)
+	at shadow.user$eval56516.invoke(form-init1151007707792084299.clj:153)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.postgresql.util.PSQLException: ERROR: table "prestamo" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	... 76 common frames omitted
+2023-04-27 09:08:42,936 [nREPL-session-23064b43-5202-46d0-bd28-b5e6e5bf6b1e] INFO  migratus.core - Ending migrations 
+2023-04-27 09:09:02,247 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 09:10:13,067 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 09:10:14,653 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 09:10:14,662 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 09:10:14,909 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 09:10:14,939 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 09:11:26,707 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-04-27 09:11:28,216 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  luminus.http-server - server started on port 3000 
+2023-04-27 09:11:35,511 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Starting migrations 
+2023-04-27 09:11:35,747 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x1d45a36d /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 09:11:35,787 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Running up for [20230425233151] 
+2023-04-27 09:11:35,800 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Up 20230425233151-prestamos 
+2023-04-27 09:11:35,801 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0xa272831 org.postgresql.jdbc.PgConnection@a272831]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:11:35,866 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 09:11:36,010 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230425233151 complete 
+2023-04-27 09:11:36,045 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Ending migrations 
+2023-04-27 09:12:18,060 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Starting migrations 
+2023-04-27 09:12:18,358 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x70b6f7d4 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 09:12:18,376 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Running down for [20230425233151 20230417032642 20230321184035 20230228002443] 
+2023-04-27 09:12:18,376 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Down 20230425233151-prestamos 
+2023-04-27 09:12:18,377 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x52164222 org.postgresql.jdbc.PgConnection@52164222]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:18,446 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 09:12:18,465 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230425233151 not complete 
+2023-04-27 09:12:18,483 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Down 20230417032642-adds-librarians 
+2023-04-27 09:12:18,484 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x52164222 org.postgresql.jdbc.PgConnection@52164222]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:18,509 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 2 down migrations 
+2023-04-27 09:12:18,544 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230417032642 not complete 
+2023-04-27 09:12:18,571 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Down 20230321184035-removes-catalog-book-info 
+2023-04-27 09:12:18,572 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x52164222 org.postgresql.jdbc.PgConnection@52164222]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:18,610 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 3 down migrations 
+2023-04-27 09:12:18,731 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230321184035 not complete 
+2023-04-27 09:12:18,741 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Down 20230228002443-initial-catalog-model 
+2023-04-27 09:12:18,743 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x52164222 org.postgresql.jdbc.PgConnection@52164222]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:18,772 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 4 down migrations 
+2023-04-27 09:12:18,813 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230228002443 not complete 
+2023-04-27 09:12:18,830 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Ending migrations 
+2023-04-27 09:12:18,831 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Starting migrations 
+2023-04-27 09:12:18,937 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x39581110 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 09:12:18,948 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230417032642 20230425233151] 
+2023-04-27 09:12:18,949 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-27 09:12:18,949 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x3f77950d org.postgresql.jdbc.PgConnection@3f77950d]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:18,978 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-27 09:12:19,077 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-27 09:12:19,094 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-27 09:12:19,095 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x3f77950d org.postgresql.jdbc.PgConnection@3f77950d]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:19,117 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-27 09:12:19,163 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-27 09:12:19,177 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Up 20230417032642-adds-librarians 
+2023-04-27 09:12:19,179 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x3f77950d org.postgresql.jdbc.PgConnection@3f77950d]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:19,215 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 2 up migrations 
+2023-04-27 09:12:19,271 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230417032642 complete 
+2023-04-27 09:12:19,292 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Up 20230425233151-prestamos 
+2023-04-27 09:12:19,292 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x3f77950d org.postgresql.jdbc.PgConnection@3f77950d]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 09:12:19,321 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 09:12:19,352 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] DEBUG migratus.database - marking 20230425233151 complete 
+2023-04-27 09:12:19,372 [nREPL-session-0db90a9d-70dc-416f-8233-17857023f647] INFO  migratus.core - Ending migrations 
+2023-04-27 09:12:45,341 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 09:12:45,563 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 14:24:22,213 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 14:24:23,921 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 14:24:23,945 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 14:24:24,393 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 14:24:24,428 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 14:26:05,265 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-04-27 14:26:06,927 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  luminus.http-server - server started on port 3000 
+2023-04-27 14:27:01,618 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Starting migrations 
+2023-04-27 14:27:02,108 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x37da135b /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 14:27:02,132 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Running down for [20230425233151 20230417032642 20230321184035 20230228002443] 
+2023-04-27 14:27:02,132 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Down 20230425233151-prestamos 
+2023-04-27 14:27:02,133 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6923d334 org.postgresql.jdbc.PgConnection@6923d334]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:02,262 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 14:27:02,500 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230425233151 not complete 
+2023-04-27 14:27:02,524 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Down 20230417032642-adds-librarians 
+2023-04-27 14:27:02,525 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6923d334 org.postgresql.jdbc.PgConnection@6923d334]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:02,565 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 2 down migrations 
+2023-04-27 14:27:02,638 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230417032642 not complete 
+2023-04-27 14:27:02,689 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Down 20230321184035-removes-catalog-book-info 
+2023-04-27 14:27:02,691 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6923d334 org.postgresql.jdbc.PgConnection@6923d334]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:02,722 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 3 down migrations 
+2023-04-27 14:27:02,819 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230321184035 not complete 
+2023-04-27 14:27:02,834 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Down 20230228002443-initial-catalog-model 
+2023-04-27 14:27:02,835 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x6923d334 org.postgresql.jdbc.PgConnection@6923d334]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:02,863 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 4 down migrations 
+2023-04-27 14:27:02,937 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230228002443 not complete 
+2023-04-27 14:27:02,955 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Ending migrations 
+2023-04-27 14:27:02,957 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Starting migrations 
+2023-04-27 14:27:03,126 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x70da3cae /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 14:27:03,131 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230417032642 20230425233151] 
+2023-04-27 14:27:03,132 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-27 14:27:03,133 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x2e6be541 org.postgresql.jdbc.PgConnection@2e6be541]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:03,175 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-27 14:27:03,339 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-27 14:27:03,368 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-27 14:27:03,369 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x2e6be541 org.postgresql.jdbc.PgConnection@2e6be541]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:03,395 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-27 14:27:03,454 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-27 14:27:03,497 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Up 20230417032642-adds-librarians 
+2023-04-27 14:27:03,497 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x2e6be541 org.postgresql.jdbc.PgConnection@2e6be541]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:03,510 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 2 up migrations 
+2023-04-27 14:27:03,585 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230417032642 complete 
+2023-04-27 14:27:03,608 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Up 20230425233151-prestamos 
+2023-04-27 14:27:03,609 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x2e6be541 org.postgresql.jdbc.PgConnection@2e6be541]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 14:27:03,666 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 14:27:03,713 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230425233151 complete 
+2023-04-27 14:27:03,734 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Ending migrations 
+2023-04-27 14:31:12,928 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s781ms). 
+2023-04-27 14:34:02,572 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s621ms). 
+2023-04-27 14:42:19,001 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m46s283ms). 
+2023-04-27 14:57:34,899 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m15s797ms). 
+2023-04-27 15:09:08,275 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m33s295ms). 
+2023-04-27 15:16:14,883 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s487ms). 
+2023-04-27 15:38:39,280 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m24s360ms). 
+2023-04-27 16:01:51,692 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m11s998ms). 
+2023-04-27 16:19:38,091 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m15s687ms). 
+2023-04-27 16:33:15,313 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m6s721ms). 
+2023-04-27 16:40:24,823 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m39s504ms). 
+2023-04-27 19:01:53,080 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m54s892ms). 
+2023-04-27 19:18:14,942 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m51s486ms). 
+2023-04-27 19:40:07,229 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s467ms). 
+2023-04-27 19:46:19,450 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Starting migrations 
+2023-04-27 19:46:19,656 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x39e587f1 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 19:46:19,675 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Running up for [20230428014229] 
+2023-04-27 19:46:19,683 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Up 20230428014229-ejemplares 
+2023-04-27 19:46:19,684 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x47922ed0 org.postgresql.jdbc.PgConnection@47922ed0]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 19:46:19,807 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 19:46:19,901 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] ERROR migratus.migration.sql - failed to execute command:
+ create table catalog.ejemplares (
+ejemplare_id bigint generated always as identity primary key,
+num_ejemplares bigint bot null,
+book_id bigint not null references catalog.book
+); 
+2023-04-27 19:46:19,903 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] ERROR migratus.migration.sql - ERROR: syntax error at or near "bot"
+  Position: 119 
+2023-04-27 19:46:19,909 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] ERROR migratus.database - Migration ejemplares failed because Batch entry 0 create table catalog.ejemplares (
+ejemplare_id bigint generated always as identity primary key,
+num_ejemplares bigint bot null,
+book_id bigint not null references catalog.book
+) was aborted: ERROR: syntax error at or near "bot"
+  Position: 119  Call getNextException to see other errors in the batch. backing out 
+2023-04-27 19:46:19,919 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 19:46:19,929 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] ERROR migratus.migration.sql - failed to execute command:
+ drop table catalog.ejemplares; 
+2023-04-27 19:46:19,929 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] ERROR migratus.migration.sql - ERROR: table "ejemplares" does not exist 
+2023-04-27 19:46:19,932 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - As expected, one of the statements failed in ejemplares while backing out the migration 
+java.sql.BatchUpdateException: Batch entry 0 drop table catalog.ejemplares was aborted: ERROR: table "ejemplares" does not exist  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.ResultHandlerDelegate.handleError(ResultHandlerDelegate.java:52)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:559)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:887)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:910)
+	at migratus.migration.sql$do_commands.invokeStatic(sql.clj:71)
+	at migratus.migration.sql$do_commands.invoke(sql.clj:60)
+	at migratus.migration.sql$execute_command$fn__27811.invoke(sql.clj:79)
+	at migratus.migration.sql$execute_command.invokeStatic(sql.clj:78)
+	at migratus.migration.sql$execute_command.invoke(sql.clj:75)
+	at migratus.migration.sql$run_sql_STAR_.invokeStatic(sql.clj:96)
+	at migratus.migration.sql$run_sql_STAR_.invoke(sql.clj:92)
+	at migratus.migration.sql$run_sql$fn__27829.invoke(sql.clj:103)
+	at next.jdbc.transaction$transact_STAR_.invokeStatic(transaction.clj:72)
+	at next.jdbc.transaction$transact_STAR_.invoke(transaction.clj:51)
+	at next.jdbc.transaction$eval13275$fn__13276.invoke(transaction.clj:121)
+	at next.jdbc.protocols$eval12267$fn__12268$G__12258__12277.invoke(protocols.clj:57)
+	at next.jdbc$transact.invokeStatic(jdbc.clj:381)
+	at next.jdbc$transact.invoke(jdbc.clj:373)
+	at migratus.migration.sql$run_sql.invokeStatic(sql.clj:102)
+	at migratus.migration.sql$run_sql.invoke(sql.clj:98)
+	at migratus.migration.sql.SqlMigration.down(sql.clj:122)
+	at migratus.database$migrate_up_STAR_$fn__28197.invoke(database.clj:89)
+	at migratus.database$migrate_up_STAR_.invokeStatic(database.clj:88)
+	at migratus.database$migrate_up_STAR_.invoke(database.clj:74)
+	at migratus.database.Database$fn__28263.invoke(database.clj:301)
+	at next.jdbc.transaction$transact_STAR_.invokeStatic(transaction.clj:72)
+	at next.jdbc.transaction$transact_STAR_.invoke(transaction.clj:51)
+	at next.jdbc.transaction$eval13275$fn__13276.invoke(transaction.clj:121)
+	at next.jdbc.protocols$eval12267$fn__12268$G__12258__12277.invoke(protocols.clj:57)
+	at next.jdbc$transact.invokeStatic(jdbc.clj:381)
+	at next.jdbc$transact.invoke(jdbc.clj:373)
+	at migratus.database.Database.migrate_up(database.clj:300)
+	at migratus.core$up_STAR_.invokeStatic(core.clj:83)
+	at migratus.core$up_STAR_.invoke(core.clj:81)
+	at migratus.core$migrate_up_STAR_.invokeStatic(core.clj:94)
+	at migratus.core$migrate_up_STAR_.invoke(core.clj:85)
+	at migratus.core$migrate_STAR_.invokeStatic(core.clj:107)
+	at migratus.core$migrate_STAR_.invoke(core.clj:103)
+	at clojure.core$partial$fn__5908.invoke(core.clj:2642)
+	at migratus.core$run.invokeStatic(core.clj:54)
+	at migratus.core$run.invoke(core.clj:50)
+	at migratus.core$migrate.invokeStatic(core.clj:114)
+	at migratus.core$migrate.invoke(core.clj:109)
+	at luminus_migrations.core$fn__28420.invokeStatic(core.clj:44)
+	at luminus_migrations.core$fn__28420.invoke(core.clj:41)
+	at luminus_migrations.core$migrate.invokeStatic(core.clj:98)
+	at luminus_migrations.core$migrate.invoke(core.clj:84)
+	at user$migrate.invokeStatic(user.clj:49)
+	at user$migrate.invoke(user.clj:46)
+	at sugbi.catalog.db$eval58344.invokeStatic(form-init353285860612768509.clj:121)
+	at sugbi.catalog.db$eval58344.invoke(form-init353285860612768509.clj:121)
+	at clojure.lang.Compiler.eval(Compiler.java:7194)
+	at clojure.lang.Compiler.eval(Compiler.java:7149)
+	at clojure.core$eval.invokeStatic(core.clj:3215)
+	at clojure.core$eval.invoke(core.clj:3211)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123$fn__26124.invoke(interruptible_eval.clj:87)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:667)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1990)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1990)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at nrepl.middleware.interruptible_eval$evaluate$fn__26123.invoke(interruptible_eval.clj:87)
+	at clojure.main$repl$read_eval_print__9206$fn__9209.invoke(main.clj:437)
+	at clojure.main$repl$read_eval_print__9206.invoke(main.clj:437)
+	at clojure.main$repl$fn__9215.invoke(main.clj:458)
+	at clojure.main$repl.invokeStatic(main.clj:458)
+	at clojure.main$repl.doInvoke(main.clj:368)
+	at clojure.lang.RestFn.invoke(RestFn.java:1523)
+	at nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+	at nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+	at nrepl.middleware.interruptible_eval$interruptible_eval$fn__26156$fn__26160.invoke(interruptible_eval.clj:152)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at nrepl.middleware.session$session_exec$main_loop__26226$fn__26230.invoke(session.clj:218)
+	at nrepl.middleware.session$session_exec$main_loop__26226.invoke(session.clj:217)
+	at clojure.lang.AFn.run(AFn.java:22)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.postgresql.util.PSQLException: ERROR: table "ejemplares" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	... 76 common frames omitted
+2023-04-27 19:46:19,976 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Ending migrations 
+2023-04-27 19:47:08,781 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Starting migrations 
+2023-04-27 19:47:09,009 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x22e07c07 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 19:47:09,027 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Running up for [20230428014229] 
+2023-04-27 19:47:09,028 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Up 20230428014229-ejemplares 
+2023-04-27 19:47:09,029 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x43ca016f org.postgresql.jdbc.PgConnection@43ca016f]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 19:47:09,045 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 19:47:09,180 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] DEBUG migratus.database - marking 20230428014229 complete 
+2023-04-27 19:47:09,201 [nREPL-session-28fe1fd9-44f2-4a7b-885f-47d1dba83a48] INFO  migratus.core - Ending migrations 
+2023-04-27 19:52:46,057 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m8s747ms). 
+2023-04-27 20:17:05,478 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m18s519ms). 
+2023-04-27 21:03:33,332 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s388ms). 
+2023-04-27 21:08:50,586 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m47s225ms). 
+2023-04-27 21:37:53,355 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m2s278ms). 
+2023-04-27 22:26:04,342 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 22:26:04,760 [main] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 22:34:17,213 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 22:34:18,472 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 22:34:18,486 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 22:34:18,847 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 22:34:18,870 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 23:06:44,407 [Thread-1] INFO  io.undertow - stopping server: Undertow - 2.2.4.Final 
+2023-04-27 23:20:45,168 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider 
+2023-04-27 23:20:46,480 [main] INFO  io.undertow - starting server: Undertow - 2.2.4.Final 
+2023-04-27 23:20:46,488 [main] INFO  org.xnio - XNIO version 3.8.0.Final 
+2023-04-27 23:20:46,694 [main] INFO  org.jboss.threads - JBoss Threads version 3.1.0.Final 
+2023-04-27 23:20:46,714 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9630 
+2023-04-27 23:21:32,340 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  sugbi.env - 
+-=[sugbi started successfully using the development profile]=- 
+2023-04-27 23:21:33,566 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  luminus.http-server - server started on port 3000 
+2023-04-27 23:21:43,668 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Starting migrations 
+2023-04-27 23:21:43,811 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x7f09edd7 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 23:21:43,832 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Ending migrations 
+2023-04-27 23:21:59,756 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Starting migrations 
+2023-04-27 23:21:59,866 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0xa6a66cd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 23:21:59,883 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Running down for [20230428014229 20230425233151 20230417032642 20230321184035 20230228002443] 
+2023-04-27 23:21:59,884 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Down 20230428014229-ejemplares 
+2023-04-27 23:21:59,885 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7092cae2 org.postgresql.jdbc.PgConnection@7092cae2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:21:59,985 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 23:22:00,097 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230428014229 not complete 
+2023-04-27 23:22:00,136 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Down 20230425233151-prestamos 
+2023-04-27 23:22:00,137 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7092cae2 org.postgresql.jdbc.PgConnection@7092cae2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:00,156 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 1 down migrations 
+2023-04-27 23:22:00,206 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230425233151 not complete 
+2023-04-27 23:22:00,233 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Down 20230417032642-adds-librarians 
+2023-04-27 23:22:00,234 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7092cae2 org.postgresql.jdbc.PgConnection@7092cae2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:00,267 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 2 down migrations 
+2023-04-27 23:22:00,384 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230417032642 not complete 
+2023-04-27 23:22:00,417 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Down 20230321184035-removes-catalog-book-info 
+2023-04-27 23:22:00,418 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7092cae2 org.postgresql.jdbc.PgConnection@7092cae2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:00,450 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 3 down migrations 
+2023-04-27 23:22:00,532 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230321184035 not complete 
+2023-04-27 23:22:00,548 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Down 20230228002443-initial-catalog-model 
+2023-04-27 23:22:00,548 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x7092cae2 org.postgresql.jdbc.PgConnection@7092cae2]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:00,569 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 4 down migrations 
+2023-04-27 23:22:00,610 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230228002443 not complete 
+2023-04-27 23:22:00,624 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Ending migrations 
+2023-04-27 23:22:00,625 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Starting migrations 
+2023-04-27 23:22:00,746 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migrations - Looking for migrations in #object[java.io.File 0x1f33ce12 /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi/resources/migrations] 
+2023-04-27 23:22:00,751 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Running up for [20230228002443 20230321184035 20230417032642 20230425233151 20230428014229] 
+2023-04-27 23:22:00,752 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Up 20230228002443-initial-catalog-model 
+2023-04-27 23:22:00,753 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x311bfd25 org.postgresql.jdbc.PgConnection@311bfd25]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:00,776 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 4 up migrations 
+2023-04-27 23:22:00,878 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230228002443 complete 
+2023-04-27 23:22:00,897 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Up 20230321184035-removes-catalog-book-info 
+2023-04-27 23:22:00,898 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x311bfd25 org.postgresql.jdbc.PgConnection@311bfd25]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:00,912 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 3 up migrations 
+2023-04-27 23:22:00,970 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230321184035 complete 
+2023-04-27 23:22:00,995 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Up 20230417032642-adds-librarians 
+2023-04-27 23:22:00,996 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x311bfd25 org.postgresql.jdbc.PgConnection@311bfd25]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:01,068 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 2 up migrations 
+2023-04-27 23:22:01,125 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230417032642 complete 
+2023-04-27 23:22:01,148 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Up 20230425233151-prestamos 
+2023-04-27 23:22:01,150 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x311bfd25 org.postgresql.jdbc.PgConnection@311bfd25]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:01,169 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 23:22:01,222 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230425233151 complete 
+2023-04-27 23:22:01,256 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Up 20230428014229-ejemplares 
+2023-04-27 23:22:01,256 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.database - Connection is  {:connection #object[org.postgresql.jdbc.PgConnection 0x311bfd25 org.postgresql.jdbc.PgConnection@311bfd25]} Config is {:store :database, :db {:connection-uri uri-censored}} 
+2023-04-27 23:22:01,278 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.migration.sql - found 1 up migrations 
+2023-04-27 23:22:01,323 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] DEBUG migratus.database - marking 20230428014229 complete 
+2023-04-27 23:22:01,343 [nREPL-session-7fa8d3c8-e97b-4f65-ae3a-179af978fc64] INFO  migratus.core - Ending migrations 

@@ -10,6 +10,12 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
 ; Using host:port localhost:7002 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
@@ -24,9 +30,6 @@ clj꞉shadow.user꞉> (user/start) ; Use `alt+enter` to evaluate
 ; Creating cljs repl session...
 ; Connecting cljs repl: shadow-cljs...
 ;   The Calva Connection Log might have more connection progress information.
-; Failed starting cljs repl
-; Jack-in done.
-clj꞉shadow.user꞉> (user/start)
 {:started
  ["#'sugbi.config/env"
   "#'sugbi.auth.google.core/openid-configuration"
@@ -34,489 +37,21 @@ clj꞉shadow.user꞉> (user/start)
   "#'sugbi.handler/init-app"
   "#'sugbi.handler/app-routes"
   "#'sugbi.core/http-server"]}
-clj꞉shadow.user꞉> (user/reset-db)
-nil
-clj꞉shadow.user꞉> (insert-book! [:title "Prueba"])
-; Syntax error compiling at (.calva/output-window/output.calva-repl:39:19).
-; Unable to resolve symbol: insert-book! in this context
-clj꞉shadow.user꞉> (insert-book! {:title "Prueba"})
-; Syntax error compiling at (.calva/output-window/output.calva-repl:42:19).
-; Unable to resolve symbol: insert-book! in this context
-clj꞉shadow.user꞉> (user/create-migration ejemplares)
-; Execution error (ExceptionInfo) at hugsql.core/validate-parameters! (core.clj:83).
-; Parameter Mismatch: :isbn parameter data not found.
-clj꞉sugbi.catalog.db꞉> 
-; Execution error (ExceptionInfo) at hugsql.core/validate-parameters! (core.clj:83).
-; Parameter Mismatch: :isbn parameter data not found.
-clj꞉sugbi.catalog.db꞉> 
-nil
-clj꞉sugbi.catalog.db꞉> 
-{:snips {},
- :fns
- {:insert-book!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 1,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :delete-book!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :n,
-    :file "sql/catalog.sql",
-    :line 5,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :search
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :*,
-    :file "sql/catalog.sql",
-    :line 8,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :get-book
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 13,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :get-books
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :*,
-    :file "sql/catalog.sql",
-    :line 18,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]}}}
-clj꞉sugbi.catalog.db꞉> 
-{:book_id 1, :title "Prueba", :isbn "aaaaa"}
-clj꞉sugbi.catalog.db꞉> 
-()
-clj꞉sugbi.catalog.db꞉> 
-; Syntax error compiling at (src/clj/sugbi/catalog/db.clj:18:1).
-; Unable to resolve symbol: matching-bokoks in this context
-clj꞉sugbi.catalog.db꞉> 
-; Syntax error compiling at (src/clj/sugbi/catalog/db.clj:18:1).
-; Unable to resolve symbol: matching-bokoks in this context
-clj꞉sugbi.catalog.db꞉> 
-({:isbn "aaaaa", :available true})
-clj꞉sugbi.catalog.db꞉> 
-; Syntax error compiling at (.calva/output-window/output.calva-repl:45:19).
-; Unable to resolve symbol: ejemplares in this context
-clj꞉sugbi.catalog.db꞉> (user/create-migration ejemplares)
-; Syntax error compiling at (.calva/output-window/output.calva-repl:116:24).
-; Unable to resolve symbol: ejemplares in this context
-clj꞉sugbi.catalog.db꞉> (user/create-migration "ejemplares")
-nil
-clj꞉sugbi.catalog.db꞉> (user/migrate)
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "bot"
-;   Position: 119
-clj꞉sugbi.catalog.db꞉> (user/migrate)
-nil
-clj꞉sugbi.catalog.db꞉> 
-{:snips {},
- :fns
- {:get-books
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :*,
-    :file "sql/catalog.sql",
-    :line 18,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :checkout-book!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 36,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :insert-book!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 1,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :is-available
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 22,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :total_ejemplares
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 26,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :search
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :*,
-    :file "sql/catalog.sql",
-    :line 8,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :return-book!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 38,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :modifica-libro-ejemplares!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 30,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :get-book
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 13,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :delete-book!
-  {:meta
-   {:doc "",
-    :command :!,
-    :result :n,
-    :file "sql/catalog.sql",
-    :line 5,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :get-book-lendings-user-id
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :*,
-    :file "sql/catalog.sql",
-    :line 41,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :is-late
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 45,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]},
-  :fecha
-  {:meta
-   {:doc "",
-    :command :?,
-    :result :1,
-    :file "sql/catalog.sql",
-    :line 34,
-    :arglists ([db] [db params] [db params options & command-options])},
-   :fn #function[conman.core/try-query/fn--13407/fn--13408]}}}
-clj꞉sugbi.catalog.db꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Using host:port localhost:7002 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> 
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Failed starting cljs repl
-; Jack-in done.
-clj꞉shadow.user꞉> insert into catalog.book (title, isbn) values (:title, :isbn)
-; Syntax error compiling at (src/clj/sugbi/catalog/core.clj:77:1).
-; Unable to resolve symbol: insert-book! in this context
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (ClassCastException) at sugbi.db.core/eval13577$fn (core.clj:14).
-; class mount.core.DerefableState cannot be cast to class clojure.lang.IFn (mount.core.DerefableState is in unnamed module of loader clojure.lang.DynamicClassLoader @20ed3303; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (ClassCastException) at sugbi.db.core/eval13577$fn (core.clj:14).
-; class mount.core.DerefableState cannot be cast to class clojure.lang.IFn (mount.core.DerefableState is in unnamed module of loader clojure.lang.DynamicClassLoader @20ed3303; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉sugbi.catalog.core꞉> 
-; Syntax error compiling at (src/clj/sugbi/catalog/core.clj:77:1).
-; Unable to resolve symbol: insert-book! in this context
-clj꞉sugbi.catalog.core꞉> 
-; Syntax error compiling at (src/clj/sugbi/catalog/pruebas.clj:2:1).
-; Unable to resolve symbol: insert-book! in this context
-clj꞉sugbi.catalog.pruebas꞉> 
-; Syntax error compiling at (src/clj/sugbi/catalog/pruebas.clj:2:1).
-; Unable to resolve symbol: insert-book! in this context
-clj꞉sugbi.catalog.pruebas꞉> 
-{:status 403, :headers {}, :body {:message "Operation restricted to librarians"}}
-clj꞉sugbi.catalog.handlers꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Using host:port localhost:7002 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> (user/start)
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-{:started
- ["#'sugbi.config/env"
-  "#'sugbi.auth.google.core/openid-configuration"
-  "#'sugbi.db.core/*db*"
-  "#'sugbi.handler/init-app"
-  "#'sugbi.handler/app-routes"
-  "#'sugbi.core/http-server"]}
-clj꞉shadow.user꞉> (user/migrate)
-nil
 clj꞉shadow.user꞉> 
 ; Failed starting cljs repl
 ; Jack-in done.
-clj꞉shadow.user꞉> (user/reset-db)
-nil
 clj꞉shadow.user꞉> 
-{:book_id 1, :title "Prueba02", :isbn "aaaaaaaa"}
-clj꞉sugbi.catalog.core꞉> 
 ; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "returning"
-;   Position: 51
+; ERROR: operator does not exist: timestamp without time zone < character varying
+;   Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
+;   Position: 105
 clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "returning"
-;   Position: 51
-clj꞉sugbi.catalog.core꞉> 
-{:ejemplare_id 1, :num_ejemplares 1, :book_id 1}
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (NullPointerException) at sugbi.catalog.core/checkout-book (core.clj:48).
-; Cannot invoke "Object.getClass()" because "x" is null
-clj꞉sugbi.catalog.core꞉> 
-{:num_ejemplares 1}
-clj꞉sugbi.catalog.core꞉> 
-1
-clj꞉sugbi.catalog.core꞉> 
-nil
-clj꞉sugbi.catalog.core꞉> 
-{:current_date #object[java.time.LocalDate 0x66d21edf "2023-04-28"]}
-clj꞉sugbi.catalog.core꞉> 
-nil
-clj꞉sugbi.catalog.core꞉> 
-{:current_date #object[java.time.LocalDate 0x6c9d610a "2023-04-28"]}
-clj꞉sugbi.catalog.core꞉> 
-#object[java.time.LocalDate 0x5dc180da "2023-04-28"]
-clj꞉sugbi.catalog.core꞉> 
-#'sugbi.catalog.core/checkout-book
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "into"
-;   Position: 1
-clj꞉sugbi.catalog.core꞉> 
-; Syntax error reading source at (REPL:55:56).
-; Invalid number: 2021-02-02
-clj꞉sugbi.catalog.core꞉> 
-#'sugbi.catalog.core/checkout-book
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "into"
-;   Position: 1
-clj꞉sugbi.catalog.core꞉> 
-#'sugbi.catalog.core/checkout-book
-clj꞉sugbi.catalog.core꞉> 
-#:next.jdbc{:update-count 1}
-clj꞉sugbi.catalog.core꞉> 
-4
-clj꞉sugbi.catalog.core꞉> 
-#:next.jdbc{:update-count 1}
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (ExceptionInfo) at hugsql.core/validate-parameters! (core.clj:83).
-; Parameter Mismatch: :book_id parameter data not found.
-clj꞉sugbi.catalog.core꞉> 
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
 ; nREPL Connection was closed
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Using host:port localhost:7002 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉shadow.user꞉> 
-; Creating cljs repl session...
-; Connecting cljs repl: shadow-cljs...
-;   The Calva Connection Log might have more connection progress information.
-; Failed starting cljs repl
-; Jack-in done.
-clj꞉shadow.user꞉> (user/start)
-{:started
- ["#'sugbi.config/env"
-  "#'sugbi.auth.google.core/openid-configuration"
-  "#'sugbi.db.core/*db*"
-  "#'sugbi.handler/init-app"
-  "#'sugbi.handler/app-routes"
-  "#'sugbi.core/http-server"]}
-clj꞉shadow.user꞉> ()
-{:book_id 2, :title "Prueba03", :isbn "aaaaaaaaaaaa"}
-clj꞉sugbi.catalog.core꞉> 
-{:ejemplare_id 2, :num_ejemplares 1, :book_id 2}
-clj꞉sugbi.catalog.core꞉> 
-"no hay ejemplares disponibles del título dado"
-clj꞉sugbi.catalog.core꞉> 
-#'sugbi.catalog.core/checkout-book
-clj꞉sugbi.catalog.core꞉> 
-{:prestamo_id 1, :inicio_prestamo #object[java.time.LocalDate 0x464e5243 "2023-04-28"], :user_id 10, :book_id 2}
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: operator is not unique: date + unknown
-;   Hint: Could not choose a best candidate operator. You might need to add explicit type casts.
-;   Position: 106
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: operator is not unique: date + unknown
-;   Hint: Could not choose a best candidate operator. You might need to add explicit type casts.
-;   Position: 106
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: operator is not unique: date + unknown
-;   Hint: Could not choose a best candidate operator. You might need to add explicit type casts.
-;   Position: 106
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "inner"
-;   Position: 53
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "inner"
-;   Position: 79
-clj꞉sugbi.catalog.core꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
-; Jacking in...
-; Connecting using "shadow-cljs" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
 ; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
 ; Using host:port localhost:7002 ...
 ; Hooking up nREPL sessions ...
@@ -543,26 +78,191 @@ clj꞉shadow.user꞉> 
 ; Failed starting cljs repl
 ; Jack-in done.
 clj꞉shadow.user꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "inner"
-;   Position: 53
-clj꞉sugbi.catalog.core꞉> 
-{:book_id 1, :available true}
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "inner"
-;   Position: 58
-clj꞉sugbi.catalog.core꞉> 
-; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
-; ERROR: syntax error at or near "where"
-;   Position: 33
-clj꞉sugbi.catalog.core꞉> 
-[{:isbn "aaaaaaaa"} {:isbn "aaaaaaaaaaaa"}]
-clj꞉sugbi.catalog.core꞉> 
 ; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
 ; ERROR: operator does not exist: date < character varying
 ;   Hint: No operator matches the given name and argument types. You might need to add explicit type casts.
-;   Position: 112
+;   Position: 83
 clj꞉sugbi.catalog.core꞉> 
-{:book_id 1, :available true}
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; nREPL Connection was closed
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Using host:port localhost:7002 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉> (user/start)
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+{:started
+ ["#'sugbi.config/env"
+  "#'sugbi.auth.google.core/openid-configuration"
+  "#'sugbi.db.core/*db*"
+  "#'sugbi.handler/init-app"
+  "#'sugbi.handler/app-routes"
+  "#'sugbi.core/http-server"]}
+clj꞉shadow.user꞉> 
+; Failed starting cljs repl
+; Jack-in done.
+clj꞉shadow.user꞉> 
+; Execution error (NullPointerException) at sugbi.catalog.core/eval58268 (form-init7352038838627025605.clj:106).
+; Cannot invoke "clojure.lang.IFn.invoke(Object)" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+clj꞉sugbi.catalog.core꞉> 
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; nREPL Connection was closed
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Using host:port localhost:7002 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉> (user/start)
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+{:started
+ ["#'sugbi.config/env"
+  "#'sugbi.auth.google.core/openid-configuration"
+  "#'sugbi.db.core/*db*"
+  "#'sugbi.handler/init-app"
+  "#'sugbi.handler/app-routes"
+  "#'sugbi.core/http-server"]}
+clj꞉shadow.user꞉> 
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
+; ERROR: duplicate key value violates unique constraint "book_isbn_key"
+;   Detail: Key (isbn)=(otro) already exists.
+clj꞉sugbi.catalog.core꞉> 
+{:book_id 5, :title "Prueba05", :isbn "otros"}
+clj꞉sugbi.catalog.core꞉> 
+{:ejemplare_id 4, :num_ejemplares 1, :book_id 5}
+clj꞉sugbi.catalog.core꞉> 
+{:prestamo_id 2, :inicio_prestamo #object[java.time.LocalDate 0x8753f65 "2023-04-28"], :user_id 10, :book_id 5}
+clj꞉sugbi.catalog.core꞉> 
+[{:user_id 10, :title "Prueba03"} {:user_id 10, :title "Prueba05"}]
+clj꞉sugbi.catalog.core꞉> 
+true
+clj꞉sugbi.catalog.core꞉> 
+true
+clj꞉sugbi.catalog.core꞉> 
+#function[sugbi.catalog.db/eval24846/f--13427--auto----24873]
+clj꞉sugbi.catalog.core꞉> 
+true
+clj꞉sugbi.catalog.core꞉> 
+; Execution error (ExceptionInfo) at hugsql.core/validate-parameters! (core.clj:83).
+; Parameter Mismatch: :prestamo_id parameter data not found.
+clj꞉sugbi.catalog.core꞉> 
+[{:isbn "aaaaaaaaaaaa", :available false}]
+clj꞉sugbi.catalog.core꞉> 
+{:isbn "aaaaaaaa", :available true}
+clj꞉sugbi.catalog.core꞉> 
+{:isbn "otros", :available false}
+clj꞉sugbi.catalog.core꞉> 
+[{:isbn "aaaaaaaaaaaa", :available false}]
+clj꞉sugbi.catalog.core꞉> 
+[{:isbn "aaaaaaaa", :available true}
+ {:isbn "otro", :available true}
+ {:isbn "aaaaaaaaaaaa", :available false}
+ {:isbn "otros", :available false}]
+clj꞉sugbi.catalog.core꞉> 
+[{:isbn "aaaaaaaa", :available true}
+ {:isbn "otro", :available true}
+ {:isbn "aaaaaaaaaaaa", :available false}
+ {:isbn "otros", :available false}]
+clj꞉sugbi.catalog.core꞉> 
+; Failed starting cljs repl
+; Jack-in done.
+clj꞉sugbi.catalog.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Jacking in...
+; Connecting using "shadow-cljs" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /Users/britnybrito/Desktop/Semestre 6/IS/practicas/sugbi ; npx shadow-cljs -d cider/cider-nrepl:0.28.5 watch :app ; popd
+; Using host:port localhost:7002 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉> (user/start)
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+{:started
+ ["#'sugbi.config/env"
+  "#'sugbi.auth.google.core/openid-configuration"
+  "#'sugbi.db.core/*db*"
+  "#'sugbi.handler/init-app"
+  "#'sugbi.handler/app-routes"
+  "#'sugbi.core/http-server"]}
+clj꞉shadow.user꞉> (user/reset-db)
+nil
+clj꞉shadow.user꞉> 
+; Execution error (ExceptionInfo) at hugsql.core/validate-parameters! (core.clj:83).
+; Parameter Mismatch: :title parameter data not found.
+clj꞉sugbi.catalog.core꞉> 
+; Execution error (ExceptionInfo) at hugsql.core/validate-parameters! (core.clj:83).
+; Parameter Mismatch: :title parameter data not found.
+clj꞉sugbi.catalog.core꞉> 
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2675).
+; ERROR: insert or update on table "ejemplares" violates foreign key constraint "ejemplares_book_id_fkey"
+;   Detail: Key (book_id)=(1) is not present in table "book".
+clj꞉sugbi.catalog.core꞉> 
+{:book_id 1, :title "Prueba01", :isbn "otros"}
+clj꞉sugbi.catalog.core꞉> 
+{:ejemplare_id 2, :num_ejemplares 1, :book_id 1}
+clj꞉sugbi.catalog.core꞉> 
+{:book_id 2, :title "Prueba02", :isbn "otros2"}
+clj꞉sugbi.catalog.core꞉> 
+{:ejemplare_id 3, :num_ejemplares 2, :book_id 1}
+clj꞉sugbi.catalog.core꞉> 
+[]
+clj꞉sugbi.catalog.core꞉> 
+{:isbn "otros", :available true}
+clj꞉sugbi.catalog.core꞉> 
+[{:isbn "otros", :available true} {:isbn "otros", :available true}]
+clj꞉sugbi.catalog.core꞉> 
+[]
+clj꞉sugbi.catalog.core꞉> 
+{:prestamo_id 1, :inicio_prestamo #object[java.time.LocalDate 0x14d4a383 "2023-04-28"], :user_id 10, :book_id 1}
+clj꞉sugbi.catalog.core꞉> 
+[{:user_id 10, :title "Prueba01"}]
+clj꞉sugbi.catalog.core꞉> 
+"entregado tarde"
+clj꞉sugbi.catalog.core꞉> 
+#'sugbi.catalog.core/return-book
+clj꞉sugbi.catalog.core꞉> 
+#:next.jdbc{:update-count 1}
+clj꞉sugbi.catalog.core꞉> 
+[]
 clj꞉sugbi.catalog.core꞉> 

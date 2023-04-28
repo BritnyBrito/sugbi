@@ -45,44 +45,41 @@
      open-library-book-infos)))    
 (defn checkout-book
   [user-id book_id]
-  (let [num_ejemplares (- ((db/total_ejemplares {:book_id book_id})  :num_ejemplares) 1) 
-        inicio_prestamo ((db/fecha {}) :current_date)]
+  (let [num_ejemplares (- ((db/total_ejemplares {:book_id book_id})  :num_ejemplares) 1)]
   (if (< num_ejemplares 0)
     "no hay ejemplares disponibles del título dado"
     (do
       (db/modifica-libro-ejemplares! {:num_ejemplares num_ejemplares
                                       :book_id book_id})
-      (db/checkout-book!{:inicio_prestamo inicio_prestamo
-                          :user_id user-id
+      (db/checkout-book!{:user_id user-id
                           :book_id book_id})))))
 (defn return-book
   [user-id book-item-id]
   (let [num_ejemplares (+ 1 ((db/total_ejemplares {:book_id book-item-id}) :num_ejemplares))
-        fecha ((db/fecha {}) :current_date)]
-    (if ((db/is-late {:book-id book-item-id
-                    :user_id user-id
-                    :fecha fecha}) 0) 
+        prestamo_id ((db/get-prestamo_id {:book-id book-item-id
+                                          :user_id user-id}) :prestamo_id)] 
+    (if (not ((db/is-late {:prestamo_id prestamo_id}) :bool))
       "entregado tarde"
       (do
         (db/modifica-libro-ejemplares! {:num_ejemplares num_ejemplares
                                         :book_id book-item-id})
-        (db/return-book! {:inicio_prestamo fecha
-                            :user_id user-id
-                            :book_id book-item-id})))))
+        (db/return-book! {:prestamo_id prestamo_id}))))) 
 
 
 (defn get-book-lendings
   [user-id]
   (db/get-book-lendings {:user_id user-id}))
 
-(defn insert-book
-  [title isdn]
-  (db/insert-book! {:title title, :isbn isdn}))
-(defn insert-ejem
-  [book-id num]
-  (db/insert-insert-ejem! {:num_ejemplares num
-                    :book_id book-id}))
-(defn get-id
-  [title]
-  (db/get-id {:title title}))
+;;Pseudo-pruebas
+;;(db/insert-book!  {:title "Prueba01" :isbn "otros"})
+;;(db/insert-insert-ejem! {:num_ejemplares 1 :book_id 1})
+;;(db/insert-book!  {:title "Prueba02"  :isbn "otros2"})
+;;(db/insert-insert-ejem! {:num_ejemplares 2 :book_id 1})
+
+;;(checkout-book 10 1)
+;;(get-book-lendings 10)
+;;(return-book 10 1)
+;;(get-book-lendings 10)
+
+
 
